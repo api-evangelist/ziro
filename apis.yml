@@ -1,7 +1,18 @@
 aid: ziro
 name: Ziro
-description: Ziro is a company surfaced as a portfolio company of 500-global and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Zíro (somosziro.com) is a Colombian fintech that provides interest-free credit
+  for small retailers in the traditional commerce channel. Its platform lets
+  distributors and manufacturers extend "crédito sin intereses" to the small
+  shops they supply, while the supplier receives guaranteed payment and Zíro
+  assumes the credit risk. The service bundles identity verification (Colombian
+  cédula), automated credit evaluation, and fraud prevention into the ordering
+  flow. Zíro is a 500 Global portfolio company. As of this enrichment pass the
+  company exposes only a public marketing site and a customer-facing credit
+  application (an Angular SPA at creditos.somosziro.com); no public developer
+  portal, API documentation, OpenAPI/AsyncAPI specification, SDK, or MCP server
+  was found. The api.somosziro.com host exists but responds 403 (internal, not
+  publicly documented).
 url: https://raw.githubusercontent.com/api-evangelist/ziro/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,11 +20,31 @@ x-backed-by:
 - 500-global
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
+image: https://framerusercontent.com/assets/NCIFcinoQHWuuNY6cFUiOPXsarM.png
 tags:
 - Company
+- Fintech
+- Credit
+- Lending
+- Embedded Finance
+- Payments
+- SMB
+- Colombia
+- Latin America
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -21,5 +52,24 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/ziro-domain-security.yml
 - type: Website
   url: https://somosziro.com
+- type: Login
+  url: https://creditos.somosziro.com/iniciar-sesion
+- type: SignUp
+  url: https://somosziro.com/eres-un-proveedor
+- type: Pricing
+  url: https://somosziro.com/tasas-y-tarifas
+- type: TermsOfService
+  url: https://somosziro.com/terminos-y-condiciones
+- type: PrivacyPolicy
+  url: https://somosziro.com/politica-de-privacidad
+- type: Support
+  url: https://wa.me/+573142051091
+x-enrichment:
+  date: '2026-07-21'
+  status: minimal
+  artifacts_added: 1
+  pass: local-v1
